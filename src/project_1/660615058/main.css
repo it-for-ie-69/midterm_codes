@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --color-background: #14121f;
+  --color-surface: #1e1b2e;
+  --color-text: #f2f0f7;
+  --color-text-muted: #a9a4c2;
+  --color-primary: #8b5cf6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu a {
+  border: 2px solid var(--color-primary);
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+.menu a:hover {
+  background-color: var(--color-primary);
+}
+
+.head {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .aboutme-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 30px 20px;
+  margin-top: 40px;
+}

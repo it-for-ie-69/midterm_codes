@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constellations STAR</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Scroll progress bar -->
+    <div id="scroll-progress"></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="activities.html">Constellations</a>
+    </nav>
+
+    <h1>Explore the Constellations</h1>
+    <p>
+      Learn about some of the most famous constellations, their stories, and how
+      to recognise them in the night sky.
+    </p>
+    <!-- Ask ai to help-->
+    <!-- TYPING interaction: live filter of the list below -->
+    <label for="filter-box"
+      >Type your zodiac sign to discover its constellation:</label
+    ><br />
+    <input
+      type="text"
+      id="filter-box"
+      placeholder="e.g. Try Taurus, Gemini, Scorpio..."
+    />
+
+    <!-- CLICK interaction: click a list item to expand/collapse more detail -->
+    <ul id="activity-list">
+      <li
+        data-detail="
+      Date: March 21 - April 19
+      Symbol: The Ram
+      Element: Fire
+      Brightest Star: Hamal.  
+      Fun Fact:
+      Aries is the first zodiac constellation and symbolises courage, confidence, and leadership in Greek mythology."
+      >
+        <span class="activity-title">Aries ♈</span>
+      </li>
+      <li
+        data-detail="
+      Date: April 20 - May 20
+      Symbol: The Bull
+      Element: Earth
+      Brightest Star: Aldebaran
+      Fun Fact:
+      Taurus contains the famous Pleiades star cluster and has been recognised since ancient times."
+      >
+        <span class="activity-title">Taurus ♉</span>
+      </li>
+
+      <li
+        data-detail="
+        Date: May 21 - June 20
+        Symbol: The Twins
+        Element: Air
+        Brightest Stars: Castor and Pollux  
+        Fun Fact:
+        Gemini represents the twin brothers Castor and Pollux from Greek mythology."
+      >
+        <span class="activity-title">Gemini ♊</span>
+      </li>
+
+      <li
+        data-detail="
+      Date: June 21 - July 22
+      Symbol: The Crab
+      Element: Water
+      Brightest Star: Altarf
+      Fun Fact:
+      Cancer contains the beautiful Beehive Cluster, one of the closest open star clusters to Earth."
+      >
+        <span class="activity-title">Cancer ♋</span>
+      </li>
+
+      <li
+        data-detail="
+      Date: July 23 - August 22
+      Symbol: The Lion
+      Element: Fire
+      Brithtest Star: Regulus
+      Fun Fact:
+      Leo is one of the easiest constellations to recognise because of its distinctive shape.
+      "
+      >
+        <span class="activity-title">Leo ♌</span>
+      </li>
+
+      <li
+        data-detail="
+      Date: August 23 - September 22
+      Symbol: The Maiden
+      Element: Earth
+      Brightest Star: Spica
+      Fun Fact:
+      Virgo is the largest constellation of the zodiac.
+      "
+      >
+        <span class="activity-title">Virgo ♍</span>
+      </li>
+
+      <li
+        data-detail="
+      Date: September 23 - October 22
+      Symbol: The Scales
+      Element: Air
+      Brightest Stars: Zubenelgenubi & Zubeneschamali
+      Fun Fact:
+      Libra is the only zodiac constellation that represents an object instead of a living creature.
+      "
+      >
+        <span class="activity-title">Libra ♎</span>
+      </li>
+      <li
+        data-detail="
+      Date: October 23 – November 21
+      Symbol: The Scorpion
+      Element: Water
+      Brightest Star: Antares
+      Fun Fact:
+      Antares is one of the brightest red stars visible in the night sky."
+      >
+        <span class="activity-title">Scorpio ♏</span>
+      </li>
+      <li
+        data-detail="
+      Date: November 22 - December 21
+      Symbol: The Archer
+      Element: Fire
+      Brightest Star: Kaus Australis
+      Fun Fact:
+      Sagittarius points toward the centre of the Milky Way galaxy."
+      >
+        <span class="activity-title">Sagittarius ♐</span>
+      </li>
+
+      <li
+        data-detail="
+      Date: December 22 - January 19
+      Symbol: The Sea-Goat
+      Element: Earth
+      Brightest Star: Deneb Algedi
+      Fun Fact:
+      Capricorn is one of the oldest recognised constellations.
+      "
+      >
+        <span class="activity-title">Capricorn ♑</span>
+      </li>
+
+      <li
+        data-detail="
+      Date: January 20 - February 18
+      Symbol: The Water Bearer
+      Element: Air
+      Brightest Star: Sadalsuud
+      Fun Fact:
+      Aquarius is associated with the pouring of life-giving water.
+      "
+      >
+        <span class="activity-title">Aquarius ♒</span>
+      </li>
+
+      <li
+        data-detail="
+        Date: February 19 - March 20
+        Symbol: The Fish
+        Element: Water
+        Brightest Star: Alrescha
+        Fun Fact:
+        Pisces represents two fish connected by a cord in Greek mythology.
+        "
+      >
+        <span class="activity-title">Pisces ♓</span>
+      </li>
+    </ul>
+
+    <p class="hint">
+      Type your zodiac sign above, then click on the result to discover
+      interesting facts.
+    </p>
+
+    <script src="script.js"></script>
+  </body>
+</html>

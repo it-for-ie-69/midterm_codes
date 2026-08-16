@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explore the Constellations</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- scroll progress bar -->
+    <div id="scroll-progress"></div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="activities.html">Constellations</a>
+    </nav>
+
+    <h1>Explore the Constellations</h1>
+    <p>
+      Discover some of the most famous constellations and learn interesting
+      facts about each one.
+    </p>
+
+    <!-- TYPING i your name and get a live personalized greeting -->
+    <section id="greeting-widget">
+      <label for="name-input">Try typing your name here:</label><br />
+      <input type="text" id="name-input" placeholder="e.g. Alex" />
+      <p id="greeting-output"></p>
+    </section>
+
+    <p>
+      Constellations are patterns of stars that ancient cultures grouped
+      together and gave names to, often based on animals, objects, or
+      mythological figures. Humans have studied the stars for thousands of years
+      to track time, mark the seasons, and navigate across land and sea.
+    </p>
+
+    <h2>The Night Sky</h2>
+    <img
+      height="300"
+      src="https://greaterskies.com/_nuxt/img/comparison-gsk.1a57c2c.png"
+      alt="Illustration of the night sky"
+    />
+
+    <h3>Which Zodiac Constellation Represents You?</h3>
+    <p class="hint">Click an element below..</p>
+    <div class="free-time">
+      <div class="item">Fire Signs 🔥</div>
+      <div class="item">Earth Signs 🌱</div>
+      <div class="item">Air Signs 🌬️</div>
+      <div class="item">Water Signs 🌊</div>
+    </div>
+
+    <!-- show the selected icon -->
+    <p id="favorite-count">Favorites selected: 0</p>
+    <div id="favorites-output"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

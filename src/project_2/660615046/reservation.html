@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Table | Why U ?</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body class="reservation-page">
+    <header>
+      <div class="logo">Why U ?</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="reservation.html" class="active">Reservation</a></li>
+        </ul>
+      </nav>
+      <a href="reservation.html" class="btn btn-outline">Sign In</a>
+    </header>
+
+    <main class="reservation-page-wrapper">
+      <div class="reservation-header-container">
+        <div class="reservation-header">
+          <h1>Table Map : 12 - 16 April</h1>
+          <p>
+            Select your preferred zone and reserve your table for an
+            unforgettable night.
+          </p>
+        </div>
+        <div class="reservation-counter">
+          <p>Today's Booking</p>
+          <h2 id="booking-count">0</h2>
+        </div>
+      </div>
+
+      <div class="floor-plan-container">
+        <div class="floor-plan-map">
+          <div class="map-area toilet" style="grid-area: 1 / 2 / 2 / 4">
+            TOILET
+          </div>
+          <div class="map-area dj-booth" style="grid-area: 1 / 6 / 2 / 8">
+            DJ BOOTH
+          </div>
+          <div class="map-area bar" style="grid-area: 2 / 8 / 8 / 11">BAR</div>
+          <div class="map-area entrance" style="grid-area: 10 / 6 / 11 / 8">
+            ENTRANCE
+          </div>
+
+          <!-- A -->
+          <div class="map-table outdoor" style="grid-area: 2 / 7">A7</div>
+          <div class="map-table outdoor" style="grid-area: 3 / 7">A6</div>
+          <div class="map-table outdoor" style="grid-area: 4 / 7">A5</div>
+          <div class="map-table outdoor" style="grid-area: 5 / 7">A4</div>
+          <div class="map-table outdoor" style="grid-area: 6 / 7">A3</div>
+          <div class="map-table outdoor" style="grid-area: 7 / 7">A2</div>
+          <div class="map-table outdoor" style="grid-area: 8 / 7">A1</div>
+
+          <!-- B -->
+          <div class="map-table outdoor" style="grid-area: 2 / 6">B7</div>
+          <div class="map-table outdoor" style="grid-area: 3 / 6">B6</div>
+          <div class="map-table outdoor" style="grid-area: 4 / 6">B5</div>
+          <div class="map-table outdoor" style="grid-area: 5 / 6">B4</div>
+          <div class="map-table outdoor" style="grid-area: 6 / 6">B3</div>
+          <div class="map-table outdoor" style="grid-area: 7 / 6">B2</div>
+          <div class="map-table outdoor" style="grid-area: 8 / 6">B1</div>
+
+          <!-- C -->
+          <div class="map-table outdoor" style="grid-area: 3 / 5">C6</div>
+          <div class="map-table outdoor" style="grid-area: 4 / 5">C5</div>
+          <div class="map-table outdoor" style="grid-area: 5 / 5">C4</div>
+          <div class="map-table outdoor" style="grid-area: 6 / 5">C3</div>
+          <div class="map-table outdoor" style="grid-area: 7 / 5">C2</div>
+          <div class="map-table outdoor" style="grid-area: 8 / 5">C1</div>
+
+          <!-- D -->
+          <div class="map-table outdoor" style="grid-area: 2 / 4">D7</div>
+          <div class="map-table outdoor" style="grid-area: 3 / 4">D6</div>
+          <div class="map-table outdoor" style="grid-area: 4 / 4">D5</div>
+          <div class="map-table outdoor" style="grid-area: 5 / 4">D4</div>
+          <div class="map-table outdoor" style="grid-area: 6 / 4">D3</div>
+          <div class="map-table outdoor" style="grid-area: 7 / 4">D2</div>
+          <div class="map-table outdoor" style="grid-area: 8 / 4">D1</div>
+
+          <!-- E -->
+          <div class="map-table outdoor" style="grid-area: 4 / 3">E4</div>
+          <div class="map-table outdoor" style="grid-area: 5 / 3">E3</div>
+          <div class="map-table outdoor" style="grid-area: 6 / 3">E2</div>
+          <div class="map-table outdoor" style="grid-area: 7 / 3">E1</div>
+
+          <!-- F -->
+          <div class="map-table outdoor" style="grid-area: 3 / 2">F6</div>
+          <div class="map-table outdoor" style="grid-area: 4 / 2">F5</div>
+          <div class="map-table outdoor" style="grid-area: 5 / 2">F4</div>
+          <div class="map-table outdoor" style="grid-area: 6 / 2">F3</div>
+          <div class="map-table outdoor" style="grid-area: 7 / 2">F2</div>
+          <div class="map-table outdoor" style="grid-area: 8 / 2">F1</div>
+
+          <!-- G -->
+          <div class="map-table outdoor" style="grid-area: 8 / 8">G1</div>
+          <div class="map-table outdoor" style="grid-area: 8 / 9">G2</div>
+          <div class="map-table outdoor" style="grid-area: 8 / 10">G3</div>
+
+          <!-- W -->
+          <div class="map-table front-zone" style="grid-area: 9 / 5">W1</div>
+          <div class="map-table front-zone" style="grid-area: 9 / 4">W2</div>
+          <div class="map-table front-zone" style="grid-area: 9 / 3">W3</div>
+          <div class="map-table front-zone" style="grid-area: 9 / 2">W4</div>
+        </div>
+      </div>
+
+      <div class="packages-container">
+        <div class="package-card">
+          <div class="package-header outdoor-header">
+            <span class="zone-dot outdoor"></span>
+            <h3>Outdoor Zone</h3>
+            <p class="price">3,500 THB</p>
+            <p class="guests">For 8 people</p>
+          </div>
+          <div class="package-body">
+            <ul>
+              <li>Premium Care Cleansing 50 ml. (2 Bottles)</li>
+              <li>Sunscreen Lotion 4 ml. (1 Tube)</li>
+              <li>Silver Water Bowl for splashing</li>
+              <li>Signature Beer 490 ml. (12 Cans)</li>
+              <li>Signature Bucket 1300 ml. (1 Bucket)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="package-card">
+          <div class="package-header front-header">
+            <span class="zone-dot front-zone"></span>
+            <h3>Front Zone</h3>
+            <p class="price">3,000 THB</p>
+            <p class="guests">For 8 people</p>
+          </div>
+          <div class="package-body">
+            <ul>
+              <li>Premium Care Cleansing 50 ml. (2 Bottles)</li>
+              <li>Sunscreen Lotion 4 ml. (1 Tube)</li>
+              <li>Silver Water Bowl for splashing</li>
+              <li>Classic Beer 320 ml. (8 Cans)</li>
+              <li>Signature Bucket 1300 ml. (1 Bucket)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="package-note">
+        <p>** 1 table can add up to 1 extra person.</p>
+        <p>
+          Extra ticket price <strong>200 THB</strong>, you will receive 1
+          Signature or Classic Beer.
+        </p>
+      </div>
+
+      <!-- Booking Form Section -->
+      <div class="booking-section">
+        <h2>Booking Details</h2>
+        <form id="bookingForm" class="booking-form">
+          <div class="form-group">
+            <h3>Name</h3>
+            <input type="text" id="name" placeholder="Enter your name" />
+          </div>
+          <div class="form-group">
+            <h3>Phone Number</h3>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="form-group">
+            <h3>Email</h3>
+            <input type="email" id="email" placeholder="Enter your email" />
+          </div>
+          <div class="form-group">
+            <h3>Note</h3>
+            <input type="text" id="note" placeholder="Any special requests?" />
+          </div>
+          <div class="form-group">
+            <div class="form-actions">
+              <button type="button" id="btnClear" class="btn btn-outline">
+                Clear
+              </button>
+              <button type="button" id="btnConfirm" class="btn btn-primary">
+                Confirm
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <hr style="border: 1px solid var(--glass-border); margin: 3rem 0" />
+
+        <div class="promo-section" style="text-align: center">
+          <h2>Have a Promo Code?</h2>
+          <div
+            style="
+              display: flex;
+              justify-content: center;
+              gap: 1rem;
+              margin-top: 1rem;
+            "
+          >
+            <input
+              type="text"
+              id="promoInput"
+              placeholder="Enter code here"
+              style="
+                padding: 10px;
+                width: 250px;
+                font-size: 16px;
+                border: 1px solid var(--accent-color);
+                border-radius: 8px;
+                background: rgba(0, 0, 0, 0.3);
+                color: var(--text-light);
+              "
+            />
+            <button
+              type="button"
+              id="btnPromoApply"
+              class="btn btn-outline"
+              style="
+                border-color: var(--accent-color);
+                color: var(--accent-color);
+              "
+            >
+              Apply
+            </button>
+          </div>
+          <p id="promoMessage" style="margin-top: 1rem; font-weight: 600"></p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Why U ? Nimman. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

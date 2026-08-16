@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wander Chiang Mai</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1 id="title">WANDER CHIANG MAI</h1>
+      <p>
+        Explore nature, mountains, and cafés through my favorite places in
+        Chiang Mai.
+      </p>
+    </header>
+
+    <hr />
+
+    <section class="posts">
+      <h2>My Top Recommendations</h2>
+      <!-- Recommendation Tool -->
+      <section class="recommend-box">
+        <h3>Can't decide?</h3>
+        <p>Let us recommend a place for you.</p>
+        <div class="activity-choice">
+          <input type="radio" id="hiking" name="activity" value="hiking" />
+          <label for="hiking">Hiking</label>
+
+          <input type="radio" id="cafe" name="activity" value="cafe" />
+          <label for="cafe">Cafe</label>
+
+          <button id="recommendBtn">Recommend Me</button>
+        </div>
+        <div id="recommendationResult"></div>
+      </section>
+
+      <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="images/travel1.jpg" alt="Hiking in Chiang Mai" />
+          <h3>Hiking</h3>
+          <p>
+            Some of my best memories in Chiang Mai come from hiking with my
+            friends. Every trail has its own unique scenery, challenges, and
+            unforgettable moments. In this blog, I'm sharing my three favorite
+            hiking destinations that we've explored together, hoping they can
+            inspire others to enjoy nature as much as we did.
+          </p>
+          <a href="hiking.html" class="btn"> View Details →</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="images/IMG_2033.jpg" alt="Cafe in Chiang Mai" />
+          <h3>Cafès & Desserts</h3>
+          <p>
+            Some of my favorite memories in Chiang Mai come from exploring cafés
+            and dessert shops with my friends. These are the places we enjoyed
+            the most, with great drinks, tasty desserts, and cozy atmospheres.
+          </p>
+          <a href="cafe.html" class="btn"> View Details → </a>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

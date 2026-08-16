@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Comment&Feedback</title>
+    <link rel="stylesheet" href="First.css" />
+    <script src="First.js" defer></script>
+  </head>
+  <body>
+    <nav><a href="index.html">My Hobbies Showcase</a> |</nav>
+
+    <h1>Comment&Feedback</h1>
+
+    <section class="section-box">
+      <h2>Leave a Comment / Feedback</h2>
+
+      <!-- Comment Input Form -->
+      <label for="comment-input">Type your comment:</label><br />
+      <textarea
+        id="comment-input"
+        rows="4"
+        placeholder="Write your feedback or craft suggestion here..."
+      ></textarea
+      ><br /><br />
+      <button id="submit-comment-btn">Submit Comment</button>
+
+      <!-- Display Section for Comments suggested by AI-->
+      <h3>Submitted Comments:</h3>
+      <div id="comments-container">
+        <p class="no-comments">No comments yet. Be the first to leave one!</p>
+      </div>
+    </section>
+  </body>
+</html>

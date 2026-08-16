@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap");
+
+:root {
+  --main-bg-color: rgb(216, 210, 210);
+  --accent-color: #1b6ca8;
+}
+
+/* Base styles for the whole page */
+body {
+  border: 2px solid black;
+  margin: 3em auto;
+  padding: 3em;
+  width: 60%;
+  font-size: 1.1rem;
+  font-family: "Chakra Petch", sans-serif;
+  background-color: var(--main-bg-color);
+}
+
+/* Select all h1 elements */
+h1 {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* h1 immediately followed by a p — styles just the intro line */
+h1 + p {
+  font-style: italic;
+}
+
+nav {
+  margin-bottom: 1.5em;
+}
+
+nav a {
+  margin-right: 1em;
+  font-weight: bold;
+}
+
+/* Pseudo-classes: different states of a link */
+a:link {
+  color: var(--accent-color);
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Pseudo-element: insert content after every link automatically */
+nav a::after {
+  content: " →";
+}
+
+.free time {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.item {
+  background-color: white;
+  border: 1px solid black;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  flex: 1;
+  flex-basis: 10rem;
+  text-align: center;
+}
+
+#item-2 {
+  flex: 2;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+img {
+  border-radius: 0.5em;
+  display: block;
+  margin: 1em auto;
+}

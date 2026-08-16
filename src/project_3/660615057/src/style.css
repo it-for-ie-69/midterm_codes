@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --bg: #f5effb;
+  --panel: #fff8e7;
+  --pink: #fadde7;
+  --pink-dark: #e893af;
+  --mint: #cdf0e1;
+  --mint-dark: #59b98c;
+  --periwinkle: #d6d2f5;
+  --periwinkle-dark: #7a6fd1;
+  --ink: #4a3d5c;
+  --ink-soft: #7a6d8c;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  padding: 3.5em 2em;
+  max-width: 42rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.eyes {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.eye {
+  width: 64px;
+  height: 64px;
+  background: var(--white);
+  border-radius: 50%;
+  border: 4px solid var(--periwinkle-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye .pupil {
+  width: 26px;
+  height: 26px;
+  background: var(--ink);
+  border-radius: 50%;
+  position: relative;
+}
+
+.eye .pupil::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+h1 {
+  font-family: "Fredoka", sans-serif;
+  color: var(--ink);
+  font-size: 2.6rem;
+  margin: 0 0 2.5rem;
+}
+
+/* gives every input/select/button breathing room on all sides,
+   so they never touch each other and wrap nicely */
+input,
+select,
+button {
+  margin: 0.5rem 0.6rem;
+}
+
+input,
+select {
+  padding: 0.7em 1.2em;
+  border: 2px solid var(--periwinkle);
+  border-radius: 1.5em;
+  background-color: var(--white);
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  color: var(--ink);
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--periwinkle-dark);
+  box-shadow: 0 0 0 3px var(--periwinkle);
+}
+
+button {
+  padding: 0.7em 1.7em;
+  background-color: var(--mint-dark);
+  color: var(--white);
+  font-family: "Fredoka", sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 0.25rem 0.6rem rgba(89, 185, 140, 0.35);
+  transition:
+    transform 0.15s ease,
+    background-color 0.2s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  background-color: var(--periwinkle-dark);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* extra gap before the checklist card so it doesn't crowd the buttons above */
+ul {
+  list-style: none;
+  width: 100%;
+  max-width: 480px;
+  background: var(--white);
+  border-radius: 1.5rem;
+  padding: 1.75rem 2rem;
+  margin: 2.5rem auto 0;
+  box-shadow: 0 0.5rem 1.25rem var(--pink);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  text-align: left;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--panel);
+  padding: 0.8em 1.2em;
+  border-radius: 1em;
+}
+
+/* click text to toggle, fades + strikes through when done */
+.step-text {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+  transition:
+    opacity 0.4s ease,
+    color 0.4s ease;
+}
+
+.step-text.done {
+  text-decoration: line-through;
+  color: var(--mint-dark);
+  opacity: 0.6;
+}
+
+/* empty state message */
+p {
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  color: var(--ink-soft);
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}

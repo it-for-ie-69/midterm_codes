@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --color-background: #14121f;
+  --color-surface: #1e1b2e;
+  --color-text: #f2f0f7;
+  --color-text-muted: #a9a4c2;
+  --color-primary: #8b5cf6;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu a {
+  border: 2px solid var(--color-primary);
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: background-color 0.2s;
+}
+
+.head {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .aboutme-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+/* Added */
+.genre-pill:hover {
+  background-color: #402079;
+  color: white;
+  cursor: pointer;
+}
+
+#currentGenre {
+  background-color: rgba(124, 58, 237, 0.15);
+  border: 1px solid #7c3aed;
+  border-radius: 12px;
+  padding: 20px 32px;
+  margin: 20px 24px;
+  max-width: 320px;
+}
+
+#currentGenre p:first-child {
+  font-size: 14px;
+  color: #a78bfa;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+#genreDisplay {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+#greetBox {
+  margin-top: 24px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.greet-label {
+  color: #c8b9ff;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#nameBox {
+  width: 100%;
+  max-width: 280px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid #7c5cff;
+  background: #232035;
+  color: white;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+#nameBox::placeholder {
+  color: #b5b5b5;
+}
+
+#greetText {
+  font-size: 1.1rem;
+}

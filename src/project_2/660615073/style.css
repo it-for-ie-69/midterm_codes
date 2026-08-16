@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #de3831;
+  --secondary-color: #111111;
+  --light-bg: #f9f9f9;
+  --text-white: #ffffff;
+  --padding-normal: 15px;
+  --margin-normal: 20px;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+  color: var(--secondary-color);
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  padding: var(--padding-normal) 5%;
+  color: var(--text-white);
+}
+
+.main-header nav a {
+  color: var(--text-white);
+  text-decoration: none;
+  margin-left: var(--margin-normal);
+  font-weight: bold;
+}
+
+.main-header nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: var(--margin-normal) auto;
+  padding: 0 var(--padding-normal);
+}
+
+.hero-section {
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: var(--margin-normal);
+}
+
+.member-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: var(--margin-normal);
+}
+
+.member-card {
+  flex: 1 1 calc(25% - 20px);
+  min-width: 200px;
+  background-color: #f58f8f;
+  padding: var(--padding-normal);
+  text-align: center;
+  border-top: 5px solid var(--primary-color);
+  border-radius: 4px;
+}
+
+.main-header nav a.active {
+  border-bottom: 2px solid var(--text-white);
+  padding-bottom: 5px;
+}
+
+.songs-section {
+  text-align: center;
+  margin-top: var(--margin-normal);
+}
+
+.songs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.song-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.song-card:hover {
+  transform: translateY(-5px);
+}
+
+.song-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.song-info {
+  padding: var(--padding-normal);
+}
+
+.album-tag {
+  font-size: 0.8rem;
+  background-color: #f0f0f0;
+  padding: 3px 8px;
+  border-radius: 20px;
+  color: #666;
+  font-weight: bold;
+}
+
+.song-info h3 {
+  margin: 10px 0 5px 0;
+  color: var(--secondary-color);
+}
+
+.lyrics-preview {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* ช่องค้นหาเพลง */
+.search-box {
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-family: "Chakra Petch", sans-serif;
+  border: 2px solid var(--primary-color);
+  border-radius: 25px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-modal:hover {
+  color: var(--primary-color);
+}

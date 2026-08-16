@@ -1,0 +1,356 @@
+/* Import a custom font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap");
+
+/* CSS Custom Properties */
+:root {
+  --primary-color: #2f7653;
+  --dark-green: #1f5339;
+  --light-green: #e8f2ec;
+  --background-color: #f7f9f8;
+  --white-color: #ffffff;
+  --text-color: #27322d;
+  --gray-color: #647169;
+  --border-color: #d8e1dc;
+}
+
+/* Apply box-sizing to every element */
+* {
+  box-sizing: border-box;
+}
+
+/* General page style */
+body {
+  margin: 0;
+
+  background-color: var(--background-color);
+  color: var(--text-color);
+
+  font-family: "Cinzel Decorative", serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* General link style */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* General image style */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Header */
+.main-header {
+  background-color: var(--white-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 65rem;
+
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* Website name */
+.logo {
+  color: var(--primary-color);
+
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--primary-color);
+}
+
+/* Profile section */
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 3rem;
+
+  max-width: 65rem;
+
+  margin: 3rem auto;
+  padding: 2rem 1.25rem;
+}
+
+/* Profile text */
+.profile-text {
+  width: 55%;
+}
+
+.profile-text h1 {
+  margin: 0.5rem 0 1rem;
+
+  font-size: 2.8rem;
+  line-height: 1.2;
+}
+
+.profile-description {
+  margin: 0 0 1.75rem;
+
+  color: var(--gray-color);
+}
+
+/* Small green heading */
+.small-heading {
+  margin: 0;
+
+  color: var(--primary-color);
+
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+
+/* Profile image */
+.profile-image {
+  width: 40%;
+}
+
+.profile-image img {
+  width: 100%;
+
+  border: 0.4rem solid var(--white-color);
+  border-radius: 1rem;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+
+  padding: 0.75em 1.4em;
+
+  background-color: var(--primary-color);
+  color: var(--white-color);
+
+  border-radius: 0.5rem;
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.button:hover {
+  background-color: var(--dark-green);
+}
+
+/* About section */
+.about-section {
+  max-width: 65rem;
+
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+}
+
+/* Section heading */
+.section-title {
+  margin-bottom: 2rem;
+
+  text-align: center;
+}
+
+.section-title h2 {
+  margin: 0.5rem 0;
+
+  font-size: 2rem;
+}
+
+/* About cards */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 1.25rem;
+}
+
+/* General card */
+.card {
+  padding: 1.5rem;
+
+  background-color: var(--white-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+}
+
+.card h3 {
+  margin-top: 0;
+
+  color: var(--primary-color);
+}
+
+.card p {
+  margin-bottom: 0;
+
+  color: var(--gray-color);
+}
+
+/* Interests page title */
+.page-title-section {
+  padding: 4rem 1.25rem;
+
+  background-color: var(--light-green);
+
+  text-align: center;
+}
+
+.page-title-section h1 {
+  margin: 0.5rem 0;
+
+  font-size: 2.8rem;
+}
+
+.page-description {
+  max-width: 38rem;
+
+  margin: 1rem auto 0;
+
+  color: var(--gray-color);
+}
+
+/* Interests section */
+.interests-section {
+  max-width: 58rem;
+
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+
+  text-align: center;
+}
+
+/* Interest cards grid */
+.interest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.25rem;
+
+  margin-bottom: 2rem;
+}
+
+/* Interest card */
+.interest-card {
+  padding: 1.5rem;
+
+  background-color: var(--white-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+
+  text-align: left;
+}
+
+.interest-icon {
+  margin-bottom: 0.75rem;
+
+  font-size: 1.8rem;
+}
+
+.interest-card h2 {
+  margin: 0 0 0.75rem;
+
+  color: var(--primary-color);
+
+  font-size: 1.3rem;
+}
+
+.interest-card p {
+  margin: 0;
+
+  color: var(--gray-color);
+}
+
+/* Footer */
+.main-footer {
+  margin-top: 2rem;
+  padding: 1.5rem;
+
+  background-color: var(--text-color);
+  color: var(--white-color);
+
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.main-footer p {
+  margin: 0;
+}
+
+/* Interactive section */
+.interactive-section {
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.interactive-section input {
+  padding: 0.6rem;
+  font-size: 1rem;
+}
+
+.interactive-section button {
+  padding: 0.6rem 1rem;
+
+  background-color: var(--primary-color);
+  color: var(--white-color);
+
+  border: none;
+  border-radius: 0.4rem;
+
+  cursor: pointer;
+}
+
+/* Responsive design for tablets and phones */
+@media (max-width: 48rem) {
+  .profile-section {
+    flex-direction: column;
+
+    margin-top: 1rem;
+
+    text-align: center;
+  }
+
+  .profile-text,
+  .profile-image {
+    width: 100%;
+  }
+
+  .profile-image {
+    max-width: 25rem;
+  }
+
+  .about-cards,
+  .interest-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-text h1,
+  .page-title-section h1 {
+    font-size: 2.2rem;
+  }
+}

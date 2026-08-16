@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>All Flowers | Flowers of CMU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@500;700&family=Kanit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="index.html" class="brand"
+        >Flowers of CMU <span>Botanical Journal</span></a
+      >
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="flowers.html" aria-current="page">Full Collection</a>
+        <span class="nav-likes">♥ <span id="total-likes">0</span></span>
+      </nav>
+    </header>
+
+    <section class="section" style="padding-bottom: 40px">
+      <div class="section-head">
+        <div>
+          <span class="tag"></span>
+          <h2>Blooming calendar</h2>
+        </div>
+        <p>Follow the colors to see when each flower blooms.</p>
+      </div>
+
+      <!-- .calendar-row uses CSS Grid to line up 12 month columns -->
+      <div class="calendar">
+        <div class="calendar-months">
+          <span></span>
+          <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+          <span>May</span><span>Jun</span><span>Jul</span><span>Aug</span>
+          <span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+        </div>
+
+        <!-- inline style sets a CSS custom property (--bloom-color) per row —
+           CSS Part 2 slide 20, used together with var() in style.css -->
+        <div class="calendar-row" style="--bloom-color: #e2622b">
+          <span class="name">Thong Kwao</span>
+          <span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell on"></span>
+        </div>
+
+        <div class="calendar-row" style="--bloom-color: #f4dd83">
+          <span class="name">Ratchaphruek</span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell on"></span>
+          <span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+        </div>
+
+        <div class="calendar-row" style="--bloom-color: #f1948a">
+          <span class="name">Sieo</span>
+          <span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell on"></span>
+        </div>
+
+        <div class="calendar-row" style="--bloom-color: #dd53bf">
+          <span class="name">Fueang Fa</span>
+          <span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span>
+          <span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span>
+          <span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span>
+          <span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span>
+        </div>
+
+        <div class="calendar-row" style="--bloom-color: #e9be0f">
+          <span class="name">Lhuang India</span>
+          <span class="calendar-cell"></span
+          ><span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+        </div>
+
+        <div class="calendar-row" style="--bloom-color: #d7bde2">
+          <span class="name">Inthanin</span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell on"></span>
+          <span class="calendar-cell on"></span
+          ><span class="calendar-cell on"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+          <span class="calendar-cell"></span><span class="calendar-cell"></span
+          ><span class="calendar-cell"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 24px">
+      <div class="section-head">
+        <div>
+          <h2><span class="tag">MY Collection</span> About Flower Profiles</h2>
+        </div>
+        <p>A little closer look at the flowers that colors.</p>
+        <!-- 🔍 ช่องค้นหาตรงตามโจทย์ Typing + dropdown เรียงลำดับตรงตามโจทย์ Additional interaction -->
+        <div class="toolbar">
+          <input
+            type="text"
+            id="flower-search"
+            placeholder="🔍 Search flowers..."
+          />
+          <select id="sort-select" aria-label="Sort flowers">
+            <option value="default">Sort: default order</option>
+            <option value="name">Sort: name (A–Z)</option>
+            <option value="month">Sort: bloom start month</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- .specimen-grid uses CSS Grid with auto-fit, so cards
+         reflow automatically at any screen width (Responsive design) -->
+      <div class="specimen-grid">
+        <article class="specimen" id="thongkwao" data-start-month="12">
+          <figure>
+            <span class="specimen-tag">No.1</span>
+            <div class="photo-wrap">
+              <img
+                src="https://www.cmu.ac.th/content/Article/2024/15b4ed97-29b0-4411-b40b-58522ef2660a/3a6a2df0-8d0b-4c59-af68-e6430e45c939.jpg"
+                alt="Thong Kwao flowers, flame-orange, clustered at branch tips"
+              />
+            </div>
+          </figure>
+          <div class="specimen-content">
+            <div class="specimen-head">
+              <h3>Thong Kwao</h3>
+              <button
+                class="heart-btn"
+                aria-label="Like this flower"
+                data-flower-id="thongkwao"
+              >
+                <span class="heart-icon">♥</span>
+                <span class="heart-count">24</span>
+              </button>
+            </div>
+            <p class="sci">Butea monosperma · Fabaceae family</p>
+            <!-- <dl> = description list: term (dt) + definition (dd) -->
+            <dl>
+              <dt>Blooms</dt>
+              <dd>December – March</dd>
+              <dt>Appearance</dt>
+              <dd>
+                Deciduous tree, 10–15m tall, compound leaves with 3 leaflets.
+                Flowers cluster at branch tips, flame-orange to yellow,
+                pea-shaped, covered in soft fuzz.
+              </dd>
+              <dt>Meaning</dt>
+              <dd>
+                CMU's official flower and Chiang Mai province's official flower.
+                Symbolizes the bond between CMU students and their graduation
+                season.
+              </dd>
+              <dt>Found at</dt>
+              <dd>
+                Roads and gardens around campus, especially near the royal
+                graduation ceremony period.
+              </dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="specimen" id="ratchaphruek" data-start-month="3">
+          <figure>
+            <span class="specimen-tag">No.2</span>
+            <div class="photo-wrap">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Yf_WPJVejwWSTf2rdFBIrxjAhP9z7uZ6FTxAtSZf3bxnzroXKbDobRE&s=10"
+                alt="Golden shower flowers hanging in clusters"
+              />
+            </div>
+          </figure>
+          <div class="specimen-content">
+            <div class="specimen-head">
+              <h3>Ratchaphruek</h3>
+              <button
+                class="heart-btn"
+                aria-label="Like this flower"
+                data-flower-id="ratchaphruek"
+              >
+                <span class="heart-icon">♥</span>
+                <span class="heart-count">15</span>
+              </button>
+            </div>
+            <p class="sci">Cassia fistula · Fabaceae family</p>
+            <dl>
+              <dt>Blooms</dt>
+              <dd>March – May</dd>
+              <dt>Appearance</dt>
+              <dd>
+                Medium-sized tree with bright yellow flowers hanging in long
+                drooping clusters; petals are thin and drop easily.
+              </dd>
+              <dt>Meaning</dt>
+              <dd>
+                Thailand's national tree and flower. Symbolizes prosperity,
+                honor, and good fortune.
+              </dd>
+              <dt>Found at</dt>
+              <dd>Main roads and activity plazas across campus.</dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="specimen" id="sieo" data-start-month="12">
+          <figure>
+            <span class="specimen-tag">No.3</span>
+            <div class="photo-wrap">
+              <img
+                src="https://www.lcsd.gov.hk/common/batch3/images/plantphoto/tree/Caesalpiniaceae/Bauhinia_variegata/Bauhinia_variegata_2_Small.jpg"
+                alt="White-pink orchid tree flowers"
+              />
+            </div>
+          </figure>
+          <div class="specimen-content">
+            <div class="specimen-head">
+              <h3>Sieo</h3>
+              <button
+                class="heart-btn"
+                aria-label="Like this flower"
+                data-flower-id="sieo"
+              >
+                <span class="heart-icon">♥</span>
+                <span class="heart-count">9</span>
+              </button>
+            </div>
+            <p class="sci">Bauhinia variegata · Fabaceae family</p>
+            <dl>
+              <dt>Blooms</dt>
+              <dd>December – February</dd>
+              <dt>Appearance</dt>
+              <dd>
+                Small to medium tree with butterfly-shaped leaves; pale
+                pink-white flowers with 5 thin petals.
+              </dd>
+              <dt>Meaning</dt>
+              <dd>
+                One of Chiang Mai's representative flowers. Symbolizes
+                gentleness and calm.
+              </dd>
+              <dt>Found at</dt>
+              <dd>
+                Garden areas and shaded walkways around faculty buildings.
+              </dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="specimen" id="fueang-fa" data-start-month="1">
+          <figure>
+            <span class="specimen-tag">No.4</span>
+            <div class="photo-wrap">
+              <img
+                src="https://www.nongnoochpattaya.com/uploads/images/202010/85ec0ba4e3e73458a1360d5851fea09b.JPG"
+                alt="Purple bougainvillea in full bloom"
+              />
+            </div>
+          </figure>
+          <div class="specimen-content">
+            <div class="specimen-head">
+              <h3>Fueang Fa</h3>
+              <button
+                class="heart-btn"
+                aria-label="Like this flower"
+                data-flower-id="fueang-fa"
+              >
+                <span class="heart-icon">♥</span>
+                <span class="heart-count">31</span>
+              </button>
+            </div>
+            <p class="sci">Bougainvillea spectabilis · Nyctaginaceae family</p>
+            <dl>
+              <dt>Blooms</dt>
+              <dd>Nearly year-round</dd>
+              <dt>Appearance</dt>
+              <dd>
+                Thorny climbing shrub. Vividly colored bracts (purple, pink,
+                red, orange) surround small true flowers at the center.
+              </dd>
+              <dt>Meaning</dt>
+              <dd>
+                Symbolizes steadfast love and resilience, thriving even in dry
+                conditions.
+              </dd>
+              <dt>Found at</dt>
+              <dd>
+                Fences and trellises along academic buildings campus-wide.
+              </dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="specimen" id="lhuang-india" data-start-month="2">
+          <figure>
+            <span class="specimen-tag">No.5</span>
+            <div class="photo-wrap">
+              <img
+                src="https://inwfile.com/s-cx/vm51oq.jpg"
+                alt="Golden-yellow orchid cluster"
+              />
+            </div>
+          </figure>
+          <div class="specimen-content">
+            <div class="specimen-head">
+              <h3>Lhuang India</h3>
+              <button
+                class="heart-btn"
+                aria-label="Like this flower"
+                data-flower-id="lhuang-india"
+              >
+                <span class="heart-icon">♥</span>
+                <span class="heart-count">6</span>
+              </button>
+            </div>
+            <p class="sci">Dendrobium lindleyi · Orchidaceae family</p>
+            <dl>
+              <dt>Blooms</dt>
+              <dd>February – April</dd>
+              <dt>Appearance</dt>
+              <dd>
+                Small epiphytic orchid. Golden-yellow flowers with finely
+                fringed petal edges, hanging in clusters.
+              </dd>
+              <dt>Meaning</dt>
+              <dd>
+                Symbolizes elegance and perseverance, since it grows on host
+                trees without needing soil.
+              </dd>
+              <dt>Found at</dt>
+              <dd>
+                Attached to large trees in the botanical garden and shaded areas
+                around campus.
+              </dd>
+            </dl>
+          </div>
+        </article>
+
+        <article class="specimen" id="inthanin" data-start-month="3">
+          <figure>
+            <span class="specimen-tag">No.6</span>
+            <div class="photo-wrap">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Lagerstroemia_speciosa_2.jpg"
+                alt="Inthanin flowers, purple crepe-like petals in clusters"
+              />
+            </div>
+          </figure>
+          <div class="specimen-content">
+            <div class="specimen-head">
+              <h3>Inthanin</h3>
+              <button
+                class="heart-btn"
+                aria-label="Like this flower"
+                data-flower-id="inthanin"
+              >
+                <span class="heart-icon">♥</span>
+                <span class="heart-count">12</span>
+              </button>
+            </div>
+            <p class="sci">Lagerstroemia speciosa · Lythraceae family</p>
+            <dl>
+              <dt>Blooms</dt>
+              <dd>March – May</dd>
+              <dt>Appearance</dt>
+              <dd>
+                Medium to large tree with crepe-like purple to pink flowers
+                clustered at branch tips; petals are thin and crinkled.
+              </dd>
+              <dt>Meaning</dt>
+              <dd>
+                Symbolizes respect and admiration; commonly planted as a shade
+                and ornamental tree across the campus.
+              </dd>
+              <dt>Found at</dt>
+              <dd>Faculty of Humanities and the walkways surrounding it.</dd>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span
+        >Handcrafted with 💚
+        <br />
+        © 2026 CMU Flower Diary.</span
+      >
+      <span
+        ><strong>255411</strong> Information Technologies for Industrial
+        Engineers</span
+      >
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

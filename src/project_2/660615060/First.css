@@ -1,0 +1,184 @@
+/* General Layout based on T03 and T04 concepts */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: rgb(243, 217, 255);
+  color: rgb(196, 13, 252);
+}
+
+nav {
+  background-color: #8609fc;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section-box {
+  background-color: #f8e8ff;
+  padding: 20px;
+  border: 1px solid #311750;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Button Base Styles */
+button {
+  background-color: #e5b7f9;
+  color: #fefeff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+/* Fixed Duplicate: Distinct Hover State */
+button:hover {
+  background-color: #d18ef2;
+}
+
+/* Textarea / Input Styling */
+textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* Comments Section */
+#comments-container {
+  margin-top: 15px;
+}
+
+.comment-card {
+  background-color: #fff;
+  border-left: 4px solid #e5b7f9;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.comment-card p {
+  margin: 0;
+  color: #333;
+}
+
+.comment-card .comment-time {
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Gallery Grid & Hovering Showcase Cards */
+.gallery-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.craft-card {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+  border: 2px dashed #e5b7f9;
+  background-color: #e5b7f9;
+  color: #fcfcfd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.craft-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Modal Overlay Styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+  color: #333;
+}
+
+/* Controlled Image Dimensions */
+.modal-gallery {
+  width: 100%;
+  max-width: 460px;
+  height: 320px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+#modal-img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+}
+
+/* Carousel Controls inside Modal */
+.modal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.modal-nav button {
+  background-color: #d8a7b1;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-nav button:hover {
+  background-color: #88304e;
+}
+
+#img-counter {
+  font-weight: bold;
+  color: #555;
+}

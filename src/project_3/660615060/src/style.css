@@ -1,0 +1,169 @@
+body {
+  background-image: url("https://wallpapercave.com/wp/wp15306533.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(243, 217, 255);
+}
+
+/* Layout & Base */
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 0 16px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #8609fc;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgb(243, 217, 255);
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Banner */
+.popup-banner {
+  background-color: rgb(243, 217, 255);
+  color: #d18ef2;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  border-left: 4px solid #e5b7f9;
+}
+
+/* Form Controls */
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.input-field:focus {
+  border-color: #d18ef2;
+}
+
+.typing-preview {
+  margin: 10px 0 0 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.typing-preview span {
+  font-weight: bold;
+  color: #d18ef2;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  color: #555;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-btn.active {
+  background-color: #d18ef2;
+  color: white;
+  border-color: #d18ef2;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: #d18ef2;
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: rgb(196, 13, 252);
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+}
+
+.btn-delete:hover {
+  background-color: #bd2130;
+}
+
+/* List Items */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.task-text {
+  flex-grow: 1;
+  font-size: 0.95rem;
+}
+
+.task-text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin: 8px 0;
+}

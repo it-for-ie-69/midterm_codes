@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Jirapat - Profile</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1 class="title">Personal Profile</h1>
+
+    <div class="card blue profile-box">
+      <div class="profile-header">
+        <img src="Ice Pic.jpg" alt="Jirapat Suwanmanee" />
+        <div class="profile-header-text">
+          <h2>Jirapat Suwanmanee</h2>
+          <p class="subtitle">(Ice)</p>
+        </div>
+      </div>
+
+      <div class="info-group">
+        <strong>📌 Basic Information</strong><br />
+        Date of Birth: 7 April 2005 (Age 21)<br />
+        Nationality: Thai | Religion: Buddhism
+      </div>
+
+      <div class="info-group">
+        <strong>🎓 Education</strong><br />
+        Faculty of Engineering<br />
+        Industrial Engineering and Logistics Management<br />
+        Chiang Mai University
+      </div>
+
+      <div class="info-group">
+        <strong>📞 Contact</strong><br />
+        Email: ji.suwanmanee@gmail.com<br />
+        Phone: 0958359193<br />
+        Facebook: จิรภัทร สุวรรณมณี<br />
+        IG: j.i_tiger
+      </div>
+
+      <div class="info-group">
+        <h3>Choose My Favorite Drink</h3>
+        <select
+          id="drink"
+          style="padding: 5px; margin-top: 10px; border-radius: 5px"
+        >
+          <option value="" disabled selected hidden></option>
+          <option>Coffee</option>
+          <option>Milk Tea</option>
+          <option>Matcha</option>
+        </select>
+        <p id="drinkResult" style="margin-top: 10px; font-weight: bold"></p>
+      </div>
+
+      <div class="info-group">
+        <h3>Leave Me A Message</h3>
+        <input
+          type="text"
+          id="message"
+          placeholder="Write your message here..."
+        />
+        <button
+          id="submitBtn"
+          class="btn"
+          style="padding: 5px 15px; margin-top: 10px"
+        >
+          Submit
+        </button>
+        <p id="result" style="margin-top: 10px; font-weight: bold"></p>
+      </div>
+
+      <div class="profile-back-btn">
+        <a class="btn" href="index.html">Back Home</a>
+      </div>
+    </div>
+  </body>
+</html>

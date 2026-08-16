@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --bg: #f5effb;
+  --panel: #fff8e7;
+  --pink: #fadde7;
+  --pink-dark: #e893af;
+  --mint: #cdf0e1;
+  --mint-dark: #59b98c;
+  --periwinkle: #d6d2f5;
+  --periwinkle-dark: #7a6fd1;
+  --ink: #4a3d5c;
+  --ink-soft: #7a6d8c;
+  --white: #ffffff;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: var(--bg);
+  color: var(--ink);
+  margin: 0;
+  padding: 2em 2em 2em;
+  max-width: 60rem;
+  margin-inline: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+}
+
+.nav a {
+  color: var(--periwinkle-dark);
+  text-decoration: none;
+  background: white;
+  padding: 0.5em 1.2em;
+  border-radius: 2em;
+  box-shadow: 0 0.2rem 0.5rem rgba(122, 111, 209, 0.15);
+  transition: transform 0.15s ease;
+}
+
+.nav a:hover {
+  transform: translateY(-2px);
+}
+
+.eyes {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.eye {
+  width: 64px;
+  height: 64px;
+  background: var(--white);
+  border-radius: 50%;
+  border: 4px solid var(--periwinkle-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye .pupil {
+  width: 26px;
+  height: 26px;
+  background: var(--ink);
+  border-radius: 50%;
+  position: relative;
+}
+
+.eye .pupil::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  border-radius: 50%;
+}
+
+h1 {
+  font-family: "Fredoka", sans-serif;
+  color: var(--ink);
+  font-size: 3rem;
+  margin-top: 32px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 1.25rem auto 1.5rem;
+  border-radius: 1.5rem;
+  border: 0.8rem solid white;
+  box-shadow: 0 0.5rem 1.25rem var(--ink);
+}
+
+p {
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.5rem;
+  color: var(--ink-soft);
+  margin-top: 10px;
+  max-width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tag {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.item {
+  background: var(--mint);
+  color: var(--periwinkle-dark);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.5em 1.1em;
+  border-radius: 2em;
+  box-shadow: 0 0.2rem 0.5rem rgba(122, 111, 209, 0.2);
+}
+
+h2 {
+  font-family: "Nunito", sans-serif;
+  color: var(--periwinkle-dark);
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 0.2rem dashed var(--periwinkle);
+}
+
+h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  color: var(--mint-dark);
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1.5rem;
+  background: white;
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.5rem 1.25rem 2.25rem;
+  margin: 0 0 1.5rem;
+  box-shadow: 0 0.5rem 1.25rem var(--pink);
+}
+
+ol {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  background-color: white;
+  border-radius: 1.25rem;
+  padding: 1.25rem 1.5rem 1.25rem 2.25rem;
+  margin: 0 0 1.5rem;
+  box-shadow: 0 0.5rem 1.25rem var(--pink);
+  counter-reset: step;
+}
+
+label {
+  display: block;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+input[type="number"],
+input[type="text"] {
+  display: block;
+  margin: 0.5rem auto 1rem;
+  padding: 0.5em 0.8em;
+  border: 2px solid var(--periwinkle);
+  border-radius: 1em;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+button {
+  display: block;
+  margin: 0.5rem auto 1rem;
+  padding: 0.6em 1.5em;
+  background-color: var(--mint-dark);
+  color: #ffffff;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 2em;
+  box-shadow: 0 0.25rem 0.6rem rgba(89, 185, 140, 0.35);
+  transition: transform 0.15s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.checklist li {
+  cursor: pointer;
+}
+
+.checklist li.checked {
+  text-decoration: line-through;
+  color: var(--mint-dark);
+  opacity: 0.6;
+}

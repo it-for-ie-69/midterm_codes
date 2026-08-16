@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Crafting Corner</title>
+
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="First.css" />
+
+    <!-- External JS included using defer (T05 slide 14) -->
+    <script src="First.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="https://my-world-73d1fa.netlify.app/">Home</a> |
+      <a href="Second.html">Comment&Feedback</a>
+    </nav>
+
+    <h1>Welcome to My Crafting Corner</h1>
+    <p>
+      Explore my favorite handmade creations: crocheting, knitting, jewelry
+      making, and handcrafts!
+    </p>
+
+    <!-- 1. Viewer Counter Section -->
+    <section class="section-box">
+      <h2>1. Website Viewer Counter</h2>
+      <p>Total Page Viewers: <strong id="viewer-count">0</strong></p>
+      <button id="view-btn">Click to Increase Viewer Count (+1)</button>
+    </section>
+
+    <!-- 2. Craft Showcase Gallery (Multi-Image Cards suggested by AI) -->
+    <section class="section-box">
+      <h2>2. Craft Showcase Gallery</h2>
+      <p>
+        <em
+          >Hover over a card to highlight it, and click to view all pictures for
+          that project!</em
+        >
+      </p>
+
+      <div class="gallery-grid">
+        <!-- Card 1: Crocheting & Knitting -->
+        <div
+          class="craft-card"
+          data-title="Crocheted Project"
+          data-imgs="https://lh3.googleusercontent.com/d/1roD0bfI_-d0OFtSKeR7Y6I_i3p-bHGI2,https://lh3.googleusercontent.com/d/1fbrZxf3My87Olhmf3QkPf7vOx-tsxYgS,https://lh3.googleusercontent.com/d/1tmxfhRzk7NNwQlXjY-QLByhDVCmRlvfW,https://lh3.googleusercontent.com/d/1pT0AwUivehw6VOumwm4xKllDLUe1l6yT"
+        >
+          <h3>Crocheting & Knitting</h3>
+          <p>Multiple Photos inside</p>
+          <p class="card-status">Hover over me!</p>
+        </div>
+
+        <!-- Card 2: Jewelry Making -->
+        <div
+          class="craft-card"
+          data-title="Handmade Beaded Gemstones Bracelets & Phone Charms"
+          data-imgs="https://lh3.googleusercontent.com/d/168NQ0PZAr4E6khgNvACwjBw2gRI_RGO2"
+        >
+          <h3>Jewelry Making and Gemstone DIYs</h3>
+          <p>Multiple Photos inside</p>
+          <p class="card-status">Hover over me!</p>
+        </div>
+
+        <!-- Card 3: Handcrafts & DIYs -->
+        <div
+          class="craft-card"
+          data-title="Other DIY Handcrafts"
+          data-imgs="https://lh3.googleusercontent.com/d/1fySMBavwHhNKH-9P2-5g1UOFKjBNa9qm,https://lh3.googleusercontent.com/d/1l_KikZ2gHlemgOUvQk-cWEYE8I5lqSKA,https://lh3.googleusercontent.com/d/1bQB49VpetP8kh8apPqwTdvgldBWxKf-4"
+        >
+          <h3>Handcrafts & DIYs</h3>
+          <p>Multiple Photos inside</p>
+          <p class="card-status">Hover over me!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Multi-Image Modal Popup Carousel by AI-->
+    <div id="image-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <h3 id="modal-title">Craft Title</h3>
+
+        <div class="modal-gallery">
+          <img id="modal-img" src="" alt="Craft Showcase" />
+        </div>
+
+        <!-- Carousel Navigation -->
+        <div class="modal-nav">
+          <button id="prev-btn">❮ Previous</button>
+          <span id="img-counter">1 / 1</span>
+          <button id="next-btn">Next ❯</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

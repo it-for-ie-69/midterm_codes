@@ -1,0 +1,248 @@
+/* About Me */
+.aboutme-box {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: var(--color-surface);
+  padding: 30px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.aboutme-text {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.aboutme-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.aboutme-text ul li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  color: var(--color-text-muted);
+}
+
+.aboutme-text ul li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
+
+.aboutme-text h1 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.aboutme-text p {
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: #793bc0;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 12px;
+  border: 3px dashed white;
+}
+
+.about-photo {
+  flex: 1;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px;
+}
+
+.genre-pill {
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  padding: 10px 20px;
+  border-radius: 999px;
+}
+
+/* Drama Stats section */
+.title2 {
+  padding: 20px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+}
+
+.box {
+  background-color: var(--color-surface);
+  padding: 20px;
+  text-align: center;
+}
+
+.num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.label {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* Recommendations page */
+.page-title {
+  padding: 20px;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background-color: var(--color-surface);
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid #333333;
+}
+
+.card-th {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.card-photo {
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.card-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.card-meta {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.card-rate {
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.footer {
+  text-align: center;
+  color: var(--color-text-muted);
+  padding: 30px 20px;
+  margin-top: 40px;
+}
+
+.box-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 900px) {
+  .box-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .box-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* recommend box (page 1)*/
+
+.Box {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface);
+  padding: 15px;
+  border-radius: 12px;
+  border: 3px solid #333333;
+}
+
+.box-th {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.box-photo {
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 12px;
+}
+
+.box-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* Adedd */
+.card {
+  position: relative;
+}
+
+.card.favorite::after {
+  content: "❤️";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+}
+
+.card.favorite {
+  border: 3px solid #8b5cf6;
+  box-shadow: 0px 0px 20px 3px rgb(139, 92, 246);
+}
